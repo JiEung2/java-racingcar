@@ -2,13 +2,12 @@ package domain;
 
 import utils.NumberGenerator;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Cars {
-    List<Car> cars = new ArrayList<>();
+    private final List<Car> cars;
 
     public Cars(List<Car> cars) {
         this.cars = cars;
@@ -32,6 +31,10 @@ public class Cars {
 
     public List<Car> getCars() {
         return List.copyOf(cars);
+    }
+
+    public List<Car> findWinners() {
+        return WinnerDeterminer.findWinners(this.cars);
     }
 
 }
