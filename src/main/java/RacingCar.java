@@ -23,6 +23,6 @@ public class RacingCar {
             OutputView.displayRoundResult(cars.getCars());
         });
 
-        OutputView.displayWinners(WinnerDeterminer.findWinners(cars));
+        OutputView.displayWinners(cars.findWinners());
     }
 }
