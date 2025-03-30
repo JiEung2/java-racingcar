@@ -18,7 +18,7 @@ class WinnerDeterminerTest {
         Car car2 = new Car("crong", 3);
         Car car3 = new Car("honux", 2);
 
-        Cars cars = new Cars(List.of(car1, car2, car3));
+        List<Car> cars = List.of(car1, car2, car3);
 
         Assertions.assertThat(WinnerDeterminer.findWinners(cars)).isEqualTo(List.of(car1));
     }
@@ -30,7 +30,7 @@ class WinnerDeterminerTest {
         Car car2 = new Car("crong");
         Car car3 = new Car("honux");
 
-        Cars cars = new Cars(List.of(car1, car2, car3));
+        List<Car> cars = List.of(car1, car2, car3);
 
         NumberGenerator fixedNumberGenerator = new FixedNumberGenerator(4);
         car1.move(fixedNumberGenerator);
